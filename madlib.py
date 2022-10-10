@@ -1,4 +1,3 @@
-from itertools import count
 import re
 
 print(
@@ -29,8 +28,9 @@ def parse_template(test):
 def  merge(stripped, parts):
     return stripped.format(*parts)
 
+
 def madlib():
-    test = 'assets/dark_and_stormy_night_template.txt'
+    test = 'assets/make_me_a_video_game_template.txt'
     content = read_template(test)
     stripped, parts = parse_template(content)
     values = []
@@ -49,7 +49,8 @@ def save(story):
         f.write(story)
         print('Your madlib has been saved')
 
-save(madlib())
+if __name__ == '__main__':
+    save(madlib())
 
 
     
